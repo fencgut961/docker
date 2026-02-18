@@ -1,10 +1,13 @@
 services:
   postgres:
     image: postgres:latest
-    container_name: aad_postgres
+    container_name: postgresql
+    restart: unless-stopped
     environment:
       POSTGRES_DB: postgres_db
       POSTGRES_USER: postgres_user
       POSTGRES_PASSWORD: postgres_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
