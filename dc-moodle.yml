@@ -1,6 +1,3 @@
-# Copyright Broadcom, Inc. All Rights Reserved.
-# SPDX-License-Identifier: APACHE-2.0
-
 services:
   mariadb:
     image: docker.io/bitnami/mariadb:latest
@@ -36,4 +33,6 @@ volumes:
   mariadb_data:
     driver: local
   moodle_data:
+    driver: local
+  moodledata_data:
     driver: local
